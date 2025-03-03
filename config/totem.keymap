@@ -21,12 +21,7 @@
 #define TVP1 4
 #define TVP2 5
 
-&mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-};
+&lt { quick-tap-ms = <200>; };
 
 / {
     combos {
@@ -65,7 +60,6 @@
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HM";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -107,7 +101,7 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        symol {
+        symbol {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "symbol";
@@ -151,8 +145,8 @@
 
             bindings = <
         &kp F1  &kp F2        &kp F3        &kp F4        &kp F5          &kp F6        &kp F7        &kp F8      &kp F9     &kp F10
-        &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT  &kp LG(LEFT_BRACKET)
-&trans  &trans  &trans        &trans        &trans        &bt BT_CLR      &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP   &kp C_NEXT            &kp LG(RIGHT_BRACKET)
+        &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT  &kp LG(LS(LEFT_BRACKET))
+&trans  &trans  &trans        &trans        &trans        &bt BT_CLR      &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP   &kp C_NEXT                &kp LG(LS(RIGHT_BRACKET))
                               &trans        &gif          &trans          &trans        &trans        &trans
             >;
         };
